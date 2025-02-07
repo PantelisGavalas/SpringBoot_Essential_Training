@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/rooms")
 public class RoomController {
 
+    // Dummy room data to pass to rooms.html
     private static final List<Room> rooms = new ArrayList<>();
     static {
         for(int i=0;i<10;i++){
