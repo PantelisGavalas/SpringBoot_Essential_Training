@@ -1,27 +1,27 @@
 package pantelisgavalas.lil.sbet.room_web_app.models;
 
 public class StaffMember {
-    private String id;
+    private String employeeId;
     private String firstName;
     private String lastName;
-    private String position;
+    private Position position;
 
     public StaffMember() {
     }
 
-    public StaffMember(String id, String firstName, String lastName, String position) {
-        this.id = id;
+    public StaffMember(String employeeId, String firstName, String lastName, Position position) {
+        this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
     }
 
-    public String getId() {
-        return id;
+    public String getEmployeeId() {
+        return employeeId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
     }
 
     public String getFirstName() {
@@ -40,11 +40,11 @@ public class StaffMember {
         this.lastName = lastName;
     }
 
-    public String getPosition() {
+    public Position getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
+    public void setPosition(Position position) {
         this.position = position;
     }
 }
