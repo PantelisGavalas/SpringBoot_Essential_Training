@@ -1,9 +1,20 @@
 package pantelisgavalas.lil.sbet.room_web_app.models;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="EMPLOYEE")
 public class StaffMember {
+    @Id
+    @Column(name="EMPLOYEE_ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String employeeId;
+    @Column(name="FIRST_NAME")
     private String firstName;
+    @Column(name="LAST_NAME")
     private String lastName;
+    @Column(name="POSITION")
+    @Enumerated
     private Position position;
 
     public StaffMember() {
