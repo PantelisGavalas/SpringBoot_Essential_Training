@@ -29,9 +29,8 @@ public class SecurityConfig {
         http
                 // Configure authorization rules
                 .authorizeHttpRequests((authorize) -> authorize
-                        .anyRequest().authenticated()
-                        // Allow access to any URL under / or /api/* without authentication
-                        .requestMatchers("/", "/api/*").permitAll()
+                        // Allow access to these paths
+                        .requestMatchers("/", "/api/*", "/login", "/logout").permitAll()
                         // Require authentication for any other request
                         .anyRequest().authenticated()
                 )
