@@ -30,7 +30,7 @@ public class SecurityConfig {
                 // Configure authorization rules
                 .authorizeHttpRequests((authorize) -> authorize
                         // Allow access to these paths
-                        .requestMatchers("/", "/api/*", "/login", "/logout").permitAll()
+                        .requestMatchers("/", "/api/*", "api/rest/*", "/login", "/logout").permitAll()
                         // Require authentication for any other request
                         .anyRequest().authenticated()
                 )
